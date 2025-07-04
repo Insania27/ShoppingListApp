@@ -21,3 +21,6 @@ val OrangeLow = Color(0xFFFF6F00)
 val OrangeHigh = Color(0xFFFFBF00)
 val GrayLight = Color(0xFFD7D7D7)
 
+
+val TestColor = Color(0xFF2196F3)
+
