@@ -21,6 +21,7 @@ import com.example.shoppinglist.dialog.MainDialog
 import com.example.shoppinglist.navigation.NavigationGraph
 import com.example.shoppinglist.utils.Routes
 import com.example.shoppinglist.utils.UiEvent
+import androidx.core.graphics.toColorInt
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "UnusedMaterialScaffoldPaddingParameter")
@@ -59,7 +60,7 @@ fun MainScreen(
                 onClick = {
                     viewModel.onEvent(MainScreenEvent.OnNewItemClick(currentRoute!!))
                 },
-                containerColor = Color(android.graphics.Color.parseColor(viewModel.color.value)),
+                containerColor = Color(viewModel.color.value.toColorInt()),
                 shape = CircleShape
             ) { Icon(
                     painter = painterResource(R.drawable.add_icon),

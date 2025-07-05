@@ -42,6 +42,7 @@ import com.example.shoppinglist.shopping_list_screen.UiShoppingListItem
 import com.example.shoppinglist.ui.theme.GrayLight
 import com.example.shoppinglist.ui.theme.Red
 import com.example.shoppinglist.utils.UiEvent
+import androidx.core.graphics.toColorInt
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -123,7 +124,7 @@ fun NoteListScreen(
                     label = {
                         Text(
                             "Search",
-                            color = Color(android.graphics.Color.parseColor(viewModel.titleColor.value))
+                            color = Color(viewModel.titleColor.value.toColorInt())
                         )
                     },
                     colors = TextFieldDefaults.colors(
@@ -162,7 +163,7 @@ fun NoteListScreen(
                         .fillMaxSize()
                         .wrapContentHeight(),
                     textAlign = TextAlign.Center,
-                    color = Color(android.graphics.Color.parseColor(viewModel.titleColor.value))
+                    color = Color(viewModel.titleColor.value.toColorInt())
                 )
             }
         }

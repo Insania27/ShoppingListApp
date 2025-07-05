@@ -27,6 +27,7 @@ import com.example.shoppinglist.ui.theme.GreenLight
 import com.example.shoppinglist.ui.theme.LightText
 import com.example.shoppinglist.ui.theme.Red
 import com.example.shoppinglist.utils.Routes
+import androidx.core.graphics.toColorInt
 
 
 @Composable
@@ -56,7 +57,7 @@ fun UiNoteItem(
                         .weight(1f),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(android.graphics.Color.parseColor(viewModel.titleColor.value))
+                    color = Color(viewModel.titleColor.value.toColorInt())
                 )
 
                 Text(

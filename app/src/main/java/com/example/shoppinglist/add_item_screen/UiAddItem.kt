@@ -25,6 +25,7 @@ import com.example.shoppinglist.data.AddItem
 import com.example.shoppinglist.ui.theme.BlueGreen
 import com.example.shoppinglist.ui.theme.GreenLight
 import com.example.shoppinglist.ui.theme.Red
+import androidx.core.graphics.toColorInt
 
 
 @Composable
@@ -55,12 +56,12 @@ fun UiAddItem(
                 colors = CheckboxColors(
                     checkedCheckmarkColor = Color.White,
                     uncheckedCheckmarkColor = Color.White,
-                    checkedBoxColor = Color(android.graphics.Color.parseColor(viewModel.color.value)),
+                    checkedBoxColor = Color(viewModel.color.value.toColorInt()),
                     uncheckedBoxColor = Color.White,
                     disabledCheckedBoxColor = Color.White,
                     disabledUncheckedBoxColor = Color.White,
                     disabledIndeterminateBoxColor = Color.White,
-                    checkedBorderColor = Color(android.graphics.Color.parseColor(viewModel.color.value)),
+                    checkedBorderColor = Color(viewModel.color.value.toColorInt()),
                     uncheckedBorderColor = Color.Gray,
                     disabledBorderColor = Color.Gray,
                     disabledUncheckedBorderColor = Color.Gray,

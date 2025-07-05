@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.core.graphics.toColorInt
 
 
 @Composable
@@ -43,8 +44,8 @@ fun BottomNav(
                     Text(it.title)
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(android.graphics.Color.parseColor(viewModel.color.value)),
-                    selectedTextColor = Color(android.graphics.Color.parseColor(viewModel.color.value)),
+                    selectedIconColor = Color(viewModel.color.value.toColorInt()),
+                    selectedTextColor = Color(viewModel.color.value.toColorInt()),
                     unselectedTextColor = Color.Gray,
                     unselectedIconColor = Color.Gray,
                     indicatorColor = Color.Transparent

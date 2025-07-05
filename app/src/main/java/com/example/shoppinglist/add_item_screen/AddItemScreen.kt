@@ -49,6 +49,7 @@ import com.example.shoppinglist.ui.theme.DarkText
 import com.example.shoppinglist.ui.theme.GrayLight
 import com.example.shoppinglist.ui.theme.Red
 import com.example.shoppinglist.utils.UiEvent
+import androidx.core.graphics.toColorInt
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter", "UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -150,7 +151,7 @@ fun AddItemScreen(
                         Icon(
                             painter = painterResource(R.drawable.add_icon),
                             contentDescription = "Add",
-                            tint = Color(android.graphics.Color.parseColor(viewModel.color.value))
+                            tint = Color(viewModel.color.value.toColorInt())
                         )
                     }
 

@@ -36,6 +36,7 @@ import com.example.shoppinglist.dialog.MainDialog
 import com.example.shoppinglist.ui.theme.GrayLight
 import com.example.shoppinglist.ui.theme.Red
 import com.example.shoppinglist.utils.UiEvent
+import androidx.core.graphics.toColorInt
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -116,7 +117,7 @@ fun ShoppingListScreen(
                     .fillMaxSize()
                     .wrapContentHeight(),
                 textAlign = TextAlign.Center,
-                color = Color(android.graphics.Color.parseColor(viewModel.color.value))
+                color = Color(viewModel.color.value.toColorInt())
             )
         }
     }

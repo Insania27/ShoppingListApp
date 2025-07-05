@@ -46,6 +46,7 @@ import com.example.shoppinglist.ui.theme.GrayLight
 import com.example.shoppinglist.ui.theme.Red
 import com.example.shoppinglist.utils.UiEvent
 import kotlin.math.sin
+import androidx.core.graphics.toColorInt
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -138,7 +139,7 @@ fun NewNoteScreen(
                                 focusedContainerColor = Color.White,
                                 unfocusedContainerColor = Color.White,
                                 focusedIndicatorColor = Color.Transparent,
-                                unfocusedIndicatorColor = Color(android.graphics.Color.parseColor(viewModel.color.value)),
+                                unfocusedIndicatorColor = Color(viewModel.color.value.toColorInt()),
                             ),
                             singleLine = true,
                             textStyle = TextStyle(
@@ -158,7 +159,7 @@ fun NewNoteScreen(
                             Icon(
                                 painter = painterResource(R.drawable.save_icon),
                                 contentDescription = "Save",
-                                tint = Color(android.graphics.Color.parseColor(viewModel.color.value)),
+                                tint = Color(viewModel.color.value.toColorInt()),
 
                                 )
 
@@ -179,7 +180,7 @@ fun NewNoteScreen(
                             "Description",
                             fontSize = 14.sp,
                             style = TextStyle(color = MaterialTheme.colorScheme.primary),
-                            color = Color(android.graphics.Color.parseColor(viewModel.color.value))
+                            color = Color(viewModel.color.value.toColorInt())
                         )
                     },
                     colors = TextFieldDefaults.colors(
